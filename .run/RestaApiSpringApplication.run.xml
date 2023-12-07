@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RestaApiSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" />
+    <module name="resta-api-spring.main" />
+    <target name="java2" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.ss.restaapispring.RestaApiSpringApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="h2Service" run_configuration_type="docker-deploy" />
+    </method>
+  </configuration>
+</component>

@@ -19,28 +19,11 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 
-    @Override
-    public List<UserEntity> findAllUsers() {
-        return userRepository.findAll();
-    }
-
-    @Override
-    public Optional<UserEntity> findById(long id) {
-        return userRepository.findById(id);
-    }
 
     @Override
     public UserEntity saveUser(UserEntity userEntity) {
         return userRepository.save(userEntity);
     }
 
-    @Override
-    public UserEntity updateUser(UserEntity userEntity) {
-        return userRepository.save(userEntity);
-    }
 
-    @Override
-    public void deleteEmployee(Long id) {
-        userRepository.deleteById(id);
-    }
 }

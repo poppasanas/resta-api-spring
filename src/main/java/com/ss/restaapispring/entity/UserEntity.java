@@ -1,6 +1,8 @@
 package com.ss.restaapispring.entity;
 
 import javax.persistence.*;
+import java.time.Instant;
+import java.util.Date;
 
 @Entity
 @Table(name = "users")
@@ -17,13 +19,20 @@ public class UserEntity {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "date")
+    private Date date;
     public UserEntity() {
     }
 
-    public UserEntity(Long id, String login, String password) {
+    public UserEntity(Long id, String login, String password, String email) {
         this.id = id;
         this.login = login;
         this.password = password;
+        this.email = email;
+        this.date = new Date();
     }
 
     public Long getId() {
@@ -48,5 +57,17 @@ public class UserEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setDate(){ this.date = new Date();}
+
+    public Date getDate() {return date;}
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
